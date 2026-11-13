@@ -3,46 +3,102 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>私の自己紹介</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私の自己紹介ページ</title>
+
+  <!-- CSS：デザイン -->
   <style>
     body {
       background-color: #eaf4ff;
-      text-align: center;
       font-family: sans-serif;
-      padding: 40px;
+      text-align: center;
+      margin: 0;
+      padding: 30px;
+      color: #333;
     }
+
+    .profile {
+      background-color: white;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px #ccc;
+    }
+
     h1 {
       color: #3674b5;
     }
-    .profile {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      max-width: 500px;
-      margin: auto;
+
+    h2 {
+      color: #5595c9;
+      border-bottom: 2px solid #d5eaff;
+      padding-bottom: 8px;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    button {
+      background-color: #3674b5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #245787;
+    }
+
+    #message {
+      color: #3674b5;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
+
   <div class="profile">
+
+    <!-- HTML：ページの内容 -->
     <h1>私の自己紹介ページ</h1>
+
     <h2>プロフィール</h2>
-    <p>こんにちは！</p>
-    
-<button onclick="showMessage()">押してね！</button>
+    <p>こんにちは！私の自己紹介ページへようこそ！</p>
+    <p>趣味：ゲームをすることや音楽を聞くこと。</p>
+    <p>好きなこと：友達とお話すること。</p>
 
-<p id="message"></p>
+    <h2>できること</h2>
+    <p>
+      授業で聞いたHTMLやCSSを使ってWebページを作ることを勉強しています。
+    </p>
 
-<script>
-function showMessage() {
-  document.getElementById("message").innerHTML =
-    "見てくれてありがとう！";
-}
-</script>
+    <h2>これからしたいこと</h2>
+    <p>
+      JavaScriptを使って、動きのあるWebページや
+      面白い作品を作ってみたいです。
+    </p>
 
-    <p>趣味：音楽を聴いたりゲームをすること</p>
-    <p>好きなこと：友達とのお話</p>
-    <p>よろしくお願いします！</p>
+    <!-- JavaScriptを使うボタン -->
+    <h2>メッセージ</h2>
+    <button onclick="showMessage()">押してね！</button>
+
+    <p id="message"></p>
+
   </div>
+
+  <!-- JavaScript：動きや機能 -->
+  <script>
+    function showMessage() {
+      document.getElementById("message").innerHTML =
+        "見てくれてありがとう！";
+    }
+  </script>
+
 </body>
 </html>
